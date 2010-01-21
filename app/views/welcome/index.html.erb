@@ -2,18 +2,17 @@
 
 <% if defined? INSTANCE_INFO %>
 
-inspect    <%= INSTANCE_INFO.inspect %>
-    this is a test.
+inspect: <%= INSTANCE_INFO.inspect %>
     
     <br/>
 
-    asdf
-    
     <p>I am instance <b><%= INSTANCE_INFO["instance_id"] %></b>.</p>
 
     <p>I was launched at <b><%= INSTANCE_INFO["launch_date"] %></b>.</p>
 
     <p>My code revision is <b><%= DEPLOY_INFO["revision"] %></b>.</p>
+
+    <p>MiniFB Gem installed? <%= Gem.available?('mini_fb')%></p>
 
 <% end %>
 
